@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentUpdate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#cacaca"
+                android:id="@+id/ltProfile"
+                android:layout_height="200dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgProfilePic"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_profile_placeholder"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgName"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_username"
+                android:layout_toEndOf="@id/imgName"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgEmail"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_email_black_24dp"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_userEmail"
+                android:layout_toEndOf="@id/imgEmail"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgUsername"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_username_outline_black_24dp"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_userUsername"
+                android:layout_toEndOf="@id/imgUsername"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/username"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgContact"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_local_phone_black_24dp"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_userContact"
+                android:layout_toEndOf="@id/imgContact"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+                <EditText
+                    android:id="@+id/edtContact"
+                    android:layout_width="match_parent"
+                    android:maxLength="10"
+                    android:imeOptions="actionDone"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/contact"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnSubmit"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="12dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            android:paddingRight="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
+</layout>
